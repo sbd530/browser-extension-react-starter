@@ -1,0 +1,15 @@
+set -e
+
+# 1. Format + lint only the staged files (auto-fixes and re-stages them).
+npx lint-staged
+
+# 2. React Doctor must score 100 on the staged changes (rules in doctor.config.json).
+score="$(npx --yes react-doctor@latest --staged --score 2>/dev/null | tr -dc '0-9')"
+if [ -n "$score" ] && [ "$score" -lt 100 ]; then
+  echo "✗ React Doctor scored ${score}/100 on the staged changes (must be 100)."
+  echo "  Inspect with: npx react-doctor@latest --staged --verbose"
+  exit 1
+fi
+
+# 3. Unit tests must pass with >=75% coverage.
+npm run test:coverage

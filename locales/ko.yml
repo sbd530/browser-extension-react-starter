@@ -1,0 +1,50 @@
+# Manifest strings (referenced as __MSG_extName__ / __MSG_extDescription__).
+extName: 브라우저 익스텐션 React 스타터
+extDescription: WXT, React, TypeScript, Tailwind CSS, shadcn/ui로 만든 최신 크로스 브라우저 익스텐션 스타터.
+
+common:
+  appName: BERS
+  fullName: Browser Extension React Starter
+
+theme:
+  toggle: 테마 전환
+  light: 라이트
+  dark: 다크
+  system: 시스템
+
+popup:
+  description: shadcn/ui로 만든 스타터 팝업입니다.
+  count: '카운트'
+  increment: 증가
+  reset: 초기화
+  openOptions: 옵션 열기
+  openSidePanel: 사이드 패널 열기
+  injectUi: 페이지에 UI 삽입
+  storageHint: 카운트는 익스텐션 스토리지에 저장되어 모든 페이지에서 공유됩니다.
+
+options:
+  title: 옵션
+  description: 익스텐션을 설정합니다. 설정은 익스텐션 스토리지를 통해 모든 페이지에 동기화됩니다.
+  appearance: 화면
+  appearanceDescription: 익스텐션의 표시 방식을 선택합니다.
+  notifications: 알림
+  notificationsDescription: 콘텐츠가 감지되면 배지를 표시합니다.
+  about: 정보
+  version: '버전'
+
+sidepanel:
+  title: 사이드 패널
+  description: 현재 페이지 옆에 항상 떠 있는 패널입니다.
+
+content:
+  badge: BERS가 삽입함
+  dismiss: 닫기
+
+newtab:
+  greeting: BERS에 오신 것을 환영합니다
+  tagline: 익스텐션 스타터로 만든 새 탭 페이지입니다.
+
+devtools:
+  panelTitle: BERS
+  heading: DevTools 패널
+  description: 브라우저 DevTools 안에 렌더링되는 커스텀 패널입니다.

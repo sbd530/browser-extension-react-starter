@@ -1,0 +1,50 @@
+# Manifest strings (referenced as __MSG_extName__ / __MSG_extDescription__).
+extName: Browser Extension React Starter
+extDescription: A modern, cross-browser extension starter built with WXT, React, TypeScript, Tailwind CSS, and shadcn/ui.
+
+common:
+  appName: BERS
+  fullName: Browser Extension React Starter
+
+theme:
+  toggle: Toggle theme
+  light: Light
+  dark: Dark
+  system: System
+
+popup:
+  description: A starter popup built with shadcn/ui.
+  count: 'Count'
+  increment: Increment
+  reset: Reset
+  openOptions: Open options
+  openSidePanel: Open side panel
+  injectUi: Inject UI into page
+  storageHint: The count is saved to extension storage and shared across pages.
+
+options:
+  title: Options
+  description: Configure the extension. Settings sync across all pages via extension storage.
+  appearance: Appearance
+  appearanceDescription: Choose how the extension looks.
+  notifications: Notifications
+  notificationsDescription: Show a badge when content is detected.
+  about: About
+  version: 'Version'
+
+sidepanel:
+  title: Side Panel
+  description: A persistent panel that lives alongside the current page.
+
+content:
+  badge: Injected by BERS
+  dismiss: Dismiss
+
+newtab:
+  greeting: Welcome to BERS
+  tagline: Your new tab, powered by a browser extension starter.
+
+devtools:
+  panelTitle: BERS
+  heading: DevTools Panel
+  description: A custom panel rendered inside the browser DevTools.

@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch extension in Chrome",
+      "preLaunchTask": "wxt: build",
+      "runtimeArgs": [
+        "--load-extension=${workspaceFolder}/.output/chrome-mv3",
+        "--disable-extensions-except=${workspaceFolder}/.output/chrome-mv3"
+      ],
+      "url": "https://example.com",
+      "userDataDir": "${workspaceFolder}/.wxt/chrome-profile"
+    }
+  ]
+}
