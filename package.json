@@ -36,7 +36,7 @@
     "doctor": "npx --yes react-doctor@latest",
     "cleanse:agents": "node scripts/cleanse-agents.mjs",
     "postinstall": "wxt prepare",
-    "prepare": "husky"
+    "prepare": "husky || true"
   },
   "dependencies": {
     "@wxt-dev/i18n": "^0.2.5",
