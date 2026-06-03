@@ -71,22 +71,23 @@ Then load the extension:
 ## Project structure
 
 ```
-entrypoints/
-  background.ts              service worker (mirrors the counter on the toolbar badge)
-  popup/                     toolbar popup
-  options/                   options page (opens in a tab)
-  sidepanel/                 side panel (Chrome) / sidebar (Firefox)
-  newtab/                    new tab override (Chromium)
-  devtools/ devtools-panel/  custom DevTools panel
-  content.ts                 plain content script
-  content-ui.content/        React UI injected into a shadow root
-  content-runtime.content/   React UI injected on demand from the popup
-components/                  first-party components; components/ui/ holds shadcn primitives
-hooks/                       reusable hooks (use-storage-value)
-lib/                         utils, theme, storage, content-theme, mount
-assets/                      tailwind.css + theme.css
-public/                      icons and vendored fonts (copied verbatim)
-locales/                     en.yml, ko.yml
+src/
+  entrypoints/
+    background.ts              service worker (mirrors the counter on the toolbar badge)
+    popup/                     toolbar popup
+    options/                   options page (opens in a tab)
+    sidepanel/                 side panel (Chrome) / sidebar (Firefox)
+    newtab/                    new tab override (Chromium)
+    devtools/ devtools-panel/  custom DevTools panel
+    content.ts                 plain content script
+    content-ui.content/        React UI injected into a shadow root
+    content-runtime.content/   React UI injected on demand from the popup
+  components/                  first-party components; components/ui/ holds shadcn primitives
+  hooks/                       reusable hooks (use-storage-value)
+  lib/                         utils, theme, storage, content-theme, mount
+  assets/                      tailwind.css + theme.css
+  locales/                     en.yml, ko.yml
+public/                        icons and vendored fonts (copied verbatim)
 ```
 
 ## Scripts
@@ -109,12 +110,12 @@ locales/                     en.yml, ko.yml
 The active theme is stored once (`local:theme`) and watched in every context, so the
 popup, options page, side panel, new tab, and content-script UIs stay in sync. Pages
 toggle `.dark` on `<html>`; content-script UIs toggle it on their shadow-root wrapper.
-Design tokens are scoped to `:root, :host` in `assets/theme.css`.
+Design tokens are scoped to `:root, :host` in `src/assets/theme.css`.
 
 ## Adding shadcn components
 
 The shadcn CLI expects a Vite project, which WXT hides. Create a temporary
-`vite.config.ts` (React + `@tailwindcss/vite`, alias `@` to the root), run
+`vite.config.ts` (React + `@tailwindcss/vite`, alias `@` to `./src`), run
 `npx shadcn@latest add <component>`, then delete the file.
 
 ## Quality gates

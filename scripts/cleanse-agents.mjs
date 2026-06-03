@@ -3,7 +3,7 @@
 // Run with: npm run cleanse:agents
 import { rm } from 'node:fs/promises';
 
-const targets = ['CLAUDE.md', 'AGENTS.md', '.claude', '.cursor', '.github/copilot-instructions.md'];
+const targets = ['CLAUDE.md', '.claude', '.cursor', '.github/copilot-instructions.md'];
 
 for (const target of targets) {
   await rm(target, { recursive: true, force: true });

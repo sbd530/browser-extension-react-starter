@@ -6,6 +6,6 @@ export default {
   printWidth: 100,
   tabWidth: 2,
   plugins: ['prettier-plugin-tailwindcss'],
-  tailwindStylesheet: './assets/tailwind.css',
+  tailwindStylesheet: './src/assets/tailwind.css',
   tailwindFunctions: ['cn', 'cva'],
 };

@@ -9,8 +9,8 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       reporter: ['text', 'text-summary'],
-      include: ['components/**', 'hooks/**', 'lib/**'],
-      exclude: ['components/ui/**', '**/*.test.*', '**/*.d.ts'],
+      include: ['src/components/**', 'src/hooks/**', 'src/lib/**'],
+      exclude: ['src/components/ui/**', '**/*.test.*', '**/*.d.ts'],
       thresholds: {
         lines: 75,
         functions: 75,

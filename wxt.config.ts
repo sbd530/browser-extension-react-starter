@@ -3,6 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // See https://wxt.dev/api/config.html
 export default defineConfig({
+  srcDir: 'src',
   modules: ['@wxt-dev/module-react', '@wxt-dev/i18n/module'],
   // Explicit imports everywhere (no directory auto-imports). Import WXT APIs from '#imports'.
   imports: false,
